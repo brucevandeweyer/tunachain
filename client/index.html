@@ -1,0 +1,121 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- This code was written by Zac Delventhal @delventhalz. 
+Original source code can be found here: https://github.com/delventhalz/transfer-chain-js/blob/master/client/index.html
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sawtooth Tuna Chain</title>
+  <link rel="icon" href="favicon.png" type="image/gif">
+
+  <!-- require jquery and bootstrap scripts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- adding style here -->
+  <style type="text/css">
+    header{
+      background-color: lightgray;
+      font-size:20px;
+      padding:15px;
+    }
+    header, .form-group{
+      margin-bottom: 3%;
+    }
+    #body{
+      margin-left:3%;
+    }
+    .form-control{
+      margin: 8px;
+    }
+    #right_header{
+      width:20%;
+      font-size:15px;
+      margin-right:0px;
+    }
+    #left_header{
+      margin-left:0;
+      width:45%;
+      display:inline-block;
+    }
+    
+    #data{
+      display:inline-block;
+    }
+    
+    #right-column{
+      display: inline-block;
+      width: 45%;
+      vertical-align: top;
+      margin-left: 2%;
+    }
+    
+    .fish-prop label {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div id="left_header">Sawtooth Tuna Chain</div>
+    <i id="right_header">Example Blockchain Application for Introduction to Hyperledger Sawtooth LFS171x</i>
+  </header>
+
+  <div id="body">
+    <div id="data">
+      <label>Fish List</label>
+      <table class="table table-hover">
+        <tr>
+          <th>Tuna</th>
+          <th>Holder</th>
+        </tr>
+        <tbody id="assetList"></tbody>
+      </table>
+    </div>
+    
+    <div id="right-column">
+      <div class="form-group">
+        <label>Select Fish</label>
+        <select class="form-control" name="assetSelect">
+          <option value="none" selected>Select fish...</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <div class="fish-prop" id="prop-name">
+          <label>Name:</label><span class="value"></span></div>
+        <div class="fish-prop" id="prop-location">
+          <label>Catch Location:</label><span class="value"></span></div>
+        <div class="fish-prop" id="prop-time">
+          <label>Catch Time:</label><span class="value"></span></div>
+        <div class="fish-prop" id="prop-sold">
+          <label>Sold: </label><span class="value"></span></div>
+        <div class="fish-prop" id="prop-tilted">
+          <label>Tilted: </label><span class="value"></span></div>
+        <div class="fish-prop" id="prop-spoiled">
+          <label>Spoiled: </label><span class="value"></span></div>
+      </div>
+
+      <div class="form-group">
+        <label>Temperature list</label>
+        <table class="table table-hover">
+          <tr>
+            <th>Timestamp</th>
+            <th>Temperature &deg;C</th>
+          </tr>
+          <tbody id="temperatureList"></tbody>
+        </table>
+      </div>
+
+      <div class="form-group">
+        <input id="transferSubmit" type="button" value="Buy fish" class="btn btn-primary">
+      </div>      
+    </div>
+  </div>
+
+<script src="dist/bundle.js"></script>
+</body>
+</html>
