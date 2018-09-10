@@ -4,7 +4,7 @@ Prototype of fish supply chain solution, combing Arduino Smart Device and Hyperl
 
 ## How does it work?
 
-At startup of Arduino new fish asset is created. Arduino logs state of physical asset (temperature, if tilted or not) and logs this periodically to Sawtooth blockchain. Depending on this state, asset can be transfered using a web interface.
+At Arduino startup a new fish asset is created on Sawtooth blockchain. Arduino tracks state of physical asset (temperature, if tilted or not), sends this to Sawtooth transaction processors, who commit this to the chain. Depending on the state of the asset, its ownership can be transfered using a web interface.
 
 ## Content
 
