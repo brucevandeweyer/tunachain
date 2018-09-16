@@ -1,6 +1,5 @@
 # tunachain
-
-Prototype of fish supply chain solution, combining an Arduino Smart Device and Hyperledger Sawtooth blockchain.
+*Prototype of fish supply chain solution - Combining an Arduino Smart Device and Hyperledger Sawtooth blockchain*
 
 ## How does it work?
 
